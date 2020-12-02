@@ -1,65 +1,48 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import Layout from "../components/layout";
+import HeaderOne from "../components/header/header-one";
+import StickyHeader from "../components/header/sticky-header";
+import MainSlider from "../components/slider/main-slider";
+import VideoCardTwo from "../components/videos/video-card-two";
+import ServiceOne from "../components/services/service-one";
+import AboutCounter from "../components/about/about-counter";
+import CausesHome from "../components/causes/causes-home";
+import DonationOptions from "../components/donation-options";
+import TeamHome from "../components/team/team-home";
+import CallToActionTwo from "../components/call-to-action/call-to-action-two";
+import GalleryTestimonials from "../components/gallery/gallery-testimonials";
+import GalleryHome from "../components/gallery/gallery-home";
+import TestimonialsTwo from "../components/testimonials/testimonials-two";
+import BlogHome from "../components/blog/blog-home";
+import CallToAction from "../components/call-to-action/call-to-action";
+import GoogleMap from "../components/google-map";
+import BrandCarousel from "../components/brand-carousel";
+import Footer from "../components/footer";
 
-export default function Home() {
+const HomeOne = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout pageTitle="Home One || Azino || Charity React Next Template">
+      <HeaderOne />
+      <StickyHeader />
+      <MainSlider />
+      <VideoCardTwo />
+      <ServiceOne />
+      <AboutCounter />
+      <CausesHome />
+      <CallToActionTwo />
+      <DonationOptions />
+      <TeamHome />
+      <GalleryTestimonials>
+        <GalleryHome />
+        <TestimonialsTwo />
+      </GalleryTestimonials>
+      <BlogHome />
+      <CallToAction />
+      <GoogleMap extraClass="home" />
+      <BrandCarousel extraClass="client-carousel__has-top-shadow" />
+      <Footer />
+    </Layout>
+  );
+};
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default HomeOne;
